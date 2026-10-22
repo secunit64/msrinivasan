@@ -1,0 +1,12 @@
+package-lock.json
+dist/
+node_modules/
+doc/
+LICENSE.html
+index.html
+resume-long.html
+css/
+js/
+test-results/
+playwright-report/
+src/.observablehq/

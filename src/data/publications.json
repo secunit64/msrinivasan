@@ -1,0 +1,134 @@
+[
+  {
+    "id": "pub-pareto-lora",
+    "year": 2027,
+    "title": "Pareto LoRA: Mitigating Modality Imbalance in Unified Multimodal Models via Pareto-Optimal Gradient Integration",
+    "authors": "Xiwen Wei, Mark Nutter, Madhusudhanan Srinivasan, Radu Marculescu",
+    "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2027)",
+    "status": "Accepted",
+    "topics": ["AI", "Multimodal", "Diffusion"],
+    "url": "https://arxiv.org/abs/2606.17296"
+  },
+  {
+    "id": "pub-trellis",
+    "year": 2021,
+    "title": "trellis: An Analytics Framework for Understanding Slingshot Performance",
+    "authors": "Madhu Srinivasan, Dipanwita Mallick, Kristyn Maschhoff, Haripriya Ayyalasomayajula",
+    "venue": "Cray User Group Conference",
+    "status": "Conference paper",
+    "topics": ["HPC", "Visualization"],
+    "url": "https://cug.org/proceedings/cug2021_proceedings/includes/files/pap115s2-file1.pdf"
+  },
+  {
+    "id": "pub-redseaatlas",
+    "year": 2019,
+    "title": "RedSeaAtlas: A Visual Analytics Tool for Spatiotemporal Multivariate Red Sea Data",
+    "authors": "S. Afzal, S. Ghani, G. Tissington, S. Langodan, T. Jamil, M. Srinivasan, I. Hoteit",
+    "venue": "EnvirVis submission manuscript",
+    "status": "Manuscript",
+    "topics": ["Visualization", "Earth science"],
+    "url": "https://www.dropbox.com/s/np7gieqbpllch4i/EnvirVis2019_RSA.PDF?dl=0"
+  },
+  {
+    "id": "pub-dagstuhl-complexity",
+    "year": 2019,
+    "title": "Software Complexity, Heterogeneity, and User-facing Issues",
+    "authors": "E. Bethel, J. Patchett, P. Messmer, M. Parashar, A. Bauer, M. Srinivasan, K. Ono, N. Röber, N. Gauger, J. Bennett, et al.",
+    "venue": "In Situ Visualization for Computational Science, Dagstuhl Reports 8(7), p. 34",
+    "status": "Report contribution",
+    "topics": ["HPC", "Visualization"],
+    "url": "https://drops.dagstuhl.de/opus/volltexte/2019/10178/pdf/dagrep-v008-i007-complete.pdf#page=36"
+  },
+  {
+    "id": "pub-sonification",
+    "year": 2018,
+    "title": "Sonification of Animal Tracks as an Alternative Representation of Multi-Dimensional Data: A Northern Elephant Seal Example",
+    "authors": "C. M. Duarte, P. Riker, M. Srinivasan, P. W. Robinson, J. P. Gallo-Reynoso, et al.",
+    "venue": "Frontiers in Marine Science",
+    "status": "Journal article",
+    "topics": ["Visualization", "Marine ecology"],
+    "url": "https://doi.org/10.3389/fmars.2018.00128"
+  },
+  {
+    "id": "pub-chapala",
+    "year": 2016,
+    "title": "Simulation and Visualization of the Cyclonic Storm Chapala over the Arabian Sea: A Case Study",
+    "authors": "T. Theußl, H. P. Dasari, I. Hoteit, M. Srinivasan",
+    "venue": "Saudi International Conference on Information Technology (KACSTIT)",
+    "status": "Conference paper",
+    "topics": ["Visualization", "Earth science"],
+    "url": "https://ieeexplore.ieee.org/document/7756074/"
+  },
+  {
+    "id": "pub-neuro-vr",
+    "year": 2015,
+    "title": "Three-dimensional immersive virtual reality for studying cellular compartments in 3D models from EM preparations of neural tissues",
+    "authors": "Corrado Cali, Daniya Boges, Jumana Baghabra, Glendon Holst, Anna Kreshuk, Fred Hamprecht, Madhusudhanan Srinivasan, Heikki Lehvaslaiho, Pierre Magistretti",
+    "venue": "Journal of Comparative Neurology",
+    "status": "Journal article",
+    "topics": ["Visualization", "VR"],
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/cne.23852"
+  },
+  {
+    "id": "pub-pathlines",
+    "year": 2015,
+    "title": "PathlinesExplorer: Image-based exploration of large-scale pathline fields",
+    "authors": "O. H. Nagoor, M. Hadwiger, M. Srinivasan",
+    "venue": "IEEE Scientific Visualization Conference (SciVis), pp. 159–160",
+    "status": "Conference paper",
+    "topics": ["Visualization", "Graphics"],
+    "url": "https://ieeexplore.ieee.org/document/7429512/",
+    "video": "https://vimeo.com/136252731"
+  },
+  {
+    "id": "pub-query-driven",
+    "year": 2012,
+    "title": "Query-driven Parallel Exploration of Large Datasets",
+    "authors": "Atanas Atanasov, Madhusudhanan Srinivasan, Tobias Weinzierl",
+    "venue": "IEEE Symposium on Large-Scale Data Analysis and Visualization",
+    "status": "Conference paper",
+    "topics": ["HPC", "Visualization"],
+    "url": "https://ieeexplore.ieee.org/document/6378972/"
+  },
+  {
+    "id": "pub-avatar-behaviors",
+    "year": 2011,
+    "title": "Semi-automatic end-user tools for construction of virtual avatar behaviors",
+    "authors": "Madhusudhanan Srinivasan, Ronald A. Metoyer",
+    "venue": "ACM Web3D, pp. 121–128",
+    "status": "Conference paper",
+    "topics": ["Graphics", "Animation"],
+    "url": "https://dl.acm.org/citation.cfm?id=2010446",
+    "video": "https://vimeo.com/60426001"
+  },
+  {
+    "id": "pub-future-cave",
+    "year": 2011,
+    "title": "The Future of the CAVE",
+    "authors": "T. A. DeFanti, D. Acevedo, R. A. Ainsworth, M. D. Brown, S. Cutchin, G. Dawe, K. Doerr, A. E. Johnson, C. Knox, R. Kooima, F. Kuester, J. Leigh, L. Long, P. Otto, V. Petrovic, K. Ponto, A. Prudhomme, R. Rao, L. Renambot, D. J. Sandin, J. P. Schulze, L. Smarr, M. Srinivasan, P. Weber, G. Wickham",
+    "venue": "Central European Journal of Engineering, pp. 16–37",
+    "status": "Journal article",
+    "topics": ["VR", "Graphics"],
+    "url": "https://link.springer.com/article/10.2478/s13531-010-0002-5"
+  },
+  {
+    "id": "pub-mobility-maps",
+    "year": 2005,
+    "title": "Controllable real-time locomotion using mobility maps",
+    "authors": "Madhusudhanan Srinivasan, Ronald A. Metoyer, Eric N. Mortensen",
+    "venue": "Graphics Interface, pp. 51–59",
+    "status": "Conference paper",
+    "topics": ["Graphics", "Animation"],
+    "url": "https://dl.acm.org/citation.cfm?id=1089518"
+  },
+  {
+    "id": "pub-tangible-interface",
+    "year": 2003,
+    "title": "A Tangible Interface for High-Level Direction of Multiple Animated Characters",
+    "authors": "R. A. Metoyer, L. Xu, M. Srinivasan",
+    "venue": "Graphics Interface, pp. 167–176",
+    "status": "Conference paper",
+    "topics": ["Graphics", "Animation"],
+    "url": "https://www.semanticscholar.org/paper/A-Tangible-Interface-for-High-Level-Direction-of-Metoyer-Xu/2972a05ecd1a34865b1cee907a7fe9425d873179"
+  }
+]
