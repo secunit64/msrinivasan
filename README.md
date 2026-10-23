@@ -48,9 +48,11 @@ URLs and a sitemap, and copies the original diagrams and license notice.
 
 ## Content and privacy
 
-The site header and SVG favicon use the custom navigation-ready `S.M` signature
-at `src/assets/monograms/sm-navigation.svg`. The faithful vector trace is saved
-beside it as `sm-faithful.svg`. Both are standalone artwork with no font dependency.
+The site header uses the Editorial `ms.` monogram, "The researcher's mark":
+regular Georgia serif with a blue period. The matching SVG favicon is
+`src/assets/mark.svg`.
+Both custom signature vectors remain saved in `src/assets/monograms/` as
+`sm-navigation.svg` and `sm-faithful.svg` for future use.
 The raw `sign.png` reference stays local and is ignored by Git.
 
 The unlisted `/monograms.html` gallery preserves both custom marks and the earlier

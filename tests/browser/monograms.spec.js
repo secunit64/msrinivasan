@@ -66,10 +66,15 @@ test("temporary monogram gallery is unlisted, responsive, and accessible on both
   await expect(page.locator(".wordmark")).toHaveAccessibleName(
     "Madhu Srinivasan, home",
   );
-  await expect(page.locator(".wordmark img")).toHaveAttribute(
-    "src",
-    /sm-navigation(?:\.[a-f0-9]+)?\.svg$/,
-  );
+  await expect(page.locator(".wordmark")).toHaveText("ms.");
+  await expect(page.locator(".wordmark img")).toHaveCount(0);
+  await expect(
+    page
+      .locator(".monogram-card")
+      .filter({ has: page.locator("#editorial-mark") })
+      .locator(".pick"),
+  ).toHaveText("Active");
+  await expect(page.locator("#monogram-16 .pick")).toHaveCount(0);
   expect(await page.getByRole("navigation").textContent()).not.toContain(
     "Monogram",
   );

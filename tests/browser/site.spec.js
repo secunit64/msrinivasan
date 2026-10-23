@@ -40,13 +40,20 @@ test("all pages work at root and project prefixes, without errors or overflow", 
       await expect(page.locator(".wordmark")).toHaveAccessibleName(
         "Madhu Srinivasan, home",
       );
-      await expect(page.locator(".wordmark img")).toHaveAttribute(
-        "src",
-        /sm-navigation(?:\.[a-f0-9]+)?\.svg$/,
+      await expect(page.locator(".wordmark")).toHaveText("ms.");
+      await expect(page.locator(".wordmark img")).toHaveCount(0);
+      await expect(page.locator(".wordmark")).toHaveCSS("font-weight", "400");
+      await expect(page.locator(".wordmark")).toHaveCSS(
+        "color",
+        "rgb(32, 61, 84)",
+      );
+      await expect(page.locator(".wordmark span")).toHaveCSS(
+        "color",
+        "rgb(57, 115, 147)",
       );
       await expect(page.locator('link[rel="icon"]')).toHaveAttribute(
         "href",
-        /sm-navigation(?:\.[a-f0-9]+)?\.svg$/,
+        /mark(?:\.[a-f0-9]+)?\.svg$/,
       );
       expect(
         await page.evaluate(
@@ -189,7 +196,7 @@ test("current résumé works and obsolete documents return not found", async ({
   expect((await request.get("/msrinivasan/missing.html")).status()).toBe(404);
 });
 
-test("signature header fits a narrow mobile viewport", async ({ page }) => {
+test("editorial header fits a narrow mobile viewport", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 740 });
   await page.goto("/msrinivasan/");
   await expect(
