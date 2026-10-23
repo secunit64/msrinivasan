@@ -22,16 +22,17 @@ export function relativeRoot(path) {
   );
 }
 
-export function siteHead({ title, path }) {
+export function siteHead({ title, path, data = {} }) {
   const fullTitle =
     title === "Madhu Srinivasan" ? title : `${title} | Madhu Srinivasan`;
   return `<meta name="description" content="${description}">
+    ${data.index === false ? '<meta name="robots" content="noindex, nofollow">' : ""}
     <meta name="color-scheme" content="light">
     <meta property="og:type" content="website">
     <meta property="og:title" content="${escapeHtml(fullTitle)}">
     <meta property="og:description" content="${description}">
     <meta name="twitter:card" content="summary">
-    <link rel="icon" href="${relativeRoot(path)}assets/mark.svg" type="image/svg+xml">`;
+    <link rel="icon" href="${relativeRoot(path)}assets/monograms/sm-navigation.svg" type="image/svg+xml">`;
 }
 
 export function siteHeader({ path }) {
@@ -44,7 +45,7 @@ export function siteHeader({ path }) {
   ];
   return `<a class="skip-link" href="#content">Skip to content</a>
     <div class="site-nav">
-      <a class="wordmark" href="${root}index.html" aria-label="Madhu Srinivasan, home">ms<span aria-hidden="true">.</span></a>
+      <a class="wordmark" href="${root}index.html" aria-label="Madhu Srinivasan, home"><img src="${root}assets/monograms/sm-navigation.svg" alt="" width="56" height="40"></a>
       <nav aria-label="Main navigation">${links
         .map(([name, slug]) => {
           const active =

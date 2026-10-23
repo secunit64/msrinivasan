@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 685 490" role="img" aria-labelledby="title description" color="#203d54">
+  <title id="title">S.M signature monogram, navigation version</title>
+  <desc id="description">A simplified drawing based on the supplied signature, retaining the leaf-shaped S loop, diagonal crossing, period, and rounded M. The descender is shortened and stroke weight is made even for small sizes.</desc>
+  <g id="art" fill="none" stroke="currentColor" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M270 29 C201 18 104 73 60 143 C19 206 28 286 72 331 C109 367 166 388 211 411 C235 425 219 436 187 448 L103 466"/>
+    <path d="M270 29 C210 120 144 243 86 350 C55 407 32 439 25 458"/>
+    <path d="M390 64 C410 132 422 282 452 339 C469 370 474 279 475 219 C477 261 484 331 504 340 C526 350 536 276 534 224 C548 267 563 306 586 315 C607 324 631 315 655 303"/>
+  </g>
+  <circle cx="320" cy="317" r="10" fill="currentColor"/>
+</svg>

@@ -1,0 +1,466 @@
+@import url("./site.css");
+
+.studio-note {
+  max-width: 700px !important;
+  color: #55636a;
+  font-size: 14px;
+}
+.study-shell {
+  margin-top: 36px;
+  --sample-background: #f0f3f1;
+  --sample-ink: #203d54;
+  --sample-accent: #397393;
+  --sample-muted: #4f6673;
+  --sample-rule: #ccd8d8;
+}
+.study-shell:has(#surface-ink:checked) {
+  --sample-background: #18303f;
+  --sample-ink: #edf2ed;
+  --sample-accent: #9cc8dc;
+  --sample-muted: #bacdd5;
+  --sample-rule: #46616f;
+}
+.surface-picker {
+  border: 0;
+  border-top: 1px solid #dce3df;
+  padding: 18px 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  align-items: center;
+  font-size: 13px;
+}
+.surface-picker legend {
+  padding-right: 14px;
+  font-size: 12px;
+  color: #55636a;
+}
+.surface-picker label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  padding: 7px 4px;
+}
+.surface-picker input {
+  accent-color: #245d7c;
+  width: 16px;
+  height: 16px;
+}
+.surface-picker input:focus-visible {
+  outline: 3px solid #245d7c;
+  outline-offset: 4px;
+}
+.surface-hint {
+  margin-left: auto;
+  color: #55636a;
+  font-size: 12px;
+}
+.monogram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.monogram-card {
+  border: 1px solid #d9e2df;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  min-width: 0;
+}
+.monogram-card.recommended {
+  border-color: #9bb7c1;
+}
+.monogram-stage {
+  background: var(--sample-background);
+  color: var(--sample-ink);
+  padding: 18px 22px 16px;
+}
+.specimen-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--sample-muted);
+}
+.monogram {
+  min-height: 172px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.mark-dot {
+  color: var(--sample-accent);
+}
+.monogram-current {
+  font-family: var(--sans-serif);
+  font-weight: 750;
+  letter-spacing: -7px;
+}
+.monogram-editorial {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -6px;
+}
+.monogram-humanist {
+  font-family: "Avenir Next", Avenir, var(--sans-serif);
+  font-weight: 500;
+  letter-spacing: -5px;
+}
+.monogram-italic {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -7px;
+}
+.monogram-mono {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-weight: 500;
+  font-size: 76px;
+  letter-spacing: -9px;
+}
+.monogram-capitals {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 90px;
+  letter-spacing: -7px;
+}
+.monogram-slash {
+  font-family: var(--sans-serif);
+  font-weight: 300;
+  letter-spacing: -6px;
+}
+.mark-slash {
+  color: var(--sample-accent);
+  font-weight: 200;
+  font-size: 0.85em;
+  padding: 0 0.04em;
+}
+.monogram-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 65px;
+  letter-spacing: -4px;
+}
+.monogram-midpoint {
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-weight: 400;
+  letter-spacing: -5px;
+}
+.mark-midpoint {
+  color: var(--sample-accent);
+  padding: 0 0.02em;
+}
+.context-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--sample-rule);
+  padding-top: 15px;
+  min-height: 48px;
+}
+.small-mark {
+  font-size: 30px;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+.small-mark.monogram-mono {
+  font-size: 25px;
+  letter-spacing: -3px;
+}
+.small-mark.monogram-name {
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+.mini-navigation {
+  font-family: var(--sans-serif);
+  font-size: 10px;
+  color: var(--sample-muted);
+  white-space: nowrap;
+}
+.mini-navigation span {
+  margin-left: 12px;
+}
+.study-description {
+  padding: 20px 22px 24px;
+}
+#observablehq-main .study-description h2,
+#observablehq-main .study-description h3 {
+  font-family: var(--sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+.study-description p {
+  color: #55636a;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+.type-note {
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.6;
+  color: #526a76;
+}
+.pick {
+  color: #245d7c;
+  background: #eaf1f2;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.studio-shortlist {
+  border-top: 1px solid #dce3df;
+  margin-top: 48px;
+  max-width: 740px !important;
+}
+.studio-shortlist p {
+  font-size: 15px;
+  color: #55636a;
+}
+.signature-studies {
+  margin-bottom: 48px;
+}
+#observablehq-main .signature-studies > h2 {
+  margin-top: 8px;
+}
+.signature-intro {
+  color: #55636a;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.signature-script {
+  font-weight: 400;
+  font-style: normal;
+  font-synthesis: none;
+  letter-spacing: 0;
+  font-kerning: normal;
+  font-feature-settings:
+    "calt" 1,
+    "liga" 1;
+}
+.signature-monoline {
+  font-family: "Sacramento", cursive;
+}
+.signature-connected {
+  font-family: "Allura", cursive;
+}
+.signature-calligraphic {
+  font-family: "Great Vibes", cursive;
+}
+.signature-pinyon {
+  font-family: "Pinyon Script", cursive;
+}
+.signature-bickham {
+  font-family: "Bickham Local";
+}
+.signature-burgues {
+  font-family: "Burgues Local";
+}
+.monogram.signature-pinyon {
+  font-size: 100px;
+}
+.monogram.signature-bickham,
+.monogram.signature-burgues {
+  font-size: 88px;
+}
+.signature-name.signature-pinyon,
+.signature-name.signature-bickham,
+.signature-name.signature-burgues {
+  font-size: 25px;
+}
+.monogram-card:has(.swash-toggle:checked) .signature-script {
+  font-feature-settings:
+    "calt" 1,
+    "liga" 1,
+    "swsh" 1;
+}
+.swash-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--sample-muted);
+  font: 11px var(--sans-serif);
+  padding-top: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.swash-control input {
+  accent-color: #245d7c;
+  width: 16px;
+  height: 16px;
+}
+.swash-control input:focus-visible {
+  outline: 3px solid var(--sample-ink);
+  outline-offset: 3px;
+}
+.looped-studies {
+  margin-bottom: 52px;
+}
+.custom-studies {
+  margin-bottom: 56px;
+}
+#observablehq-main .custom-studies > h2 {
+  margin-top: 8px;
+}
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.vector-specimen {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+}
+.vector-specimen img {
+  width: auto;
+  height: 220px;
+  max-width: 100%;
+  object-fit: contain;
+}
+.vector-sizes {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 12px 0 22px;
+}
+.vector-sizes > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.vector-sizes img,
+.vector-nav {
+  width: auto;
+  object-fit: contain;
+}
+.vector-size-24 {
+  height: 24px;
+}
+.vector-size-32,
+.vector-nav {
+  height: 32px;
+}
+.vector-size-48 {
+  height: 48px;
+}
+.vector-sizes span {
+  color: var(--sample-muted);
+  font: 10px var(--mono);
+}
+.study-shell:has(#surface-ink:checked) .vector-art img {
+  filter: brightness(0) invert(0.95);
+}
+.vector-download {
+  font-size: 13px;
+  text-decoration: underline;
+}
+#observablehq-main .looped-studies > h2 {
+  margin-top: 8px;
+}
+.font-unavailable {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--sample-muted);
+}
+.availability-label {
+  font: 12px var(--mono);
+  color: var(--sample-ink);
+}
+.font-unavailable p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+#observablehq-main .font-unavailable a {
+  color: var(--sample-ink);
+  font-size: 12px;
+  text-decoration: underline;
+}
+.premium-note {
+  color: #55636a;
+  font-size: 12px;
+  margin-top: 24px;
+}
+.study-description .font-source {
+  margin: 14px 0 0;
+  font-size: 12px;
+}
+.monogram.signature-monoline {
+  font-size: 112px;
+}
+.monogram.signature-connected {
+  font-size: 118px;
+  letter-spacing: -4px;
+}
+.monogram.signature-calligraphic {
+  font-size: 94px;
+}
+.signature-name {
+  color: var(--sample-muted);
+  font-size: 28px;
+  line-height: 1.6;
+  text-align: center;
+  padding-bottom: 16px;
+  white-space: nowrap;
+}
+.signature-name.signature-calligraphic {
+  font-size: 26px;
+}
+.small-mark.signature-script {
+  font-size: 34px;
+}
+.small-mark.signature-connected {
+  letter-spacing: -1px;
+}
+.font-credits {
+  color: #55636a;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.font-credits summary {
+  cursor: pointer;
+}
+#observablehq-main .earlier-title {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+@media (max-width: 960px) {
+  .monogram-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+  .monogram-grid {
+    grid-template-columns: 1fr;
+  }
+  .surface-hint {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -48,6 +48,17 @@ URLs and a sitemap, and copies the original diagrams and license notice.
 
 ## Content and privacy
 
+The site header and SVG favicon use the custom navigation-ready `S.M` signature
+at `src/assets/monograms/sm-navigation.svg`. The faithful vector trace is saved
+beside it as `sm-faithful.svg`. Both are standalone artwork with no font dependency.
+The raw `sign.png` reference stays local and is ignored by Git.
+
+The unlisted `/monograms.html` gallery preserves both custom marks and the earlier
+typeface studies, with large and navigation-size previews and downloadable SVGs.
+It is marked `noindex` and excluded from the sitemap. Open-source script fonts
+are self-hosted with their SIL licenses; commercial fonts are not bundled and
+only render if genuinely installed on the viewer's machine.
+
 The starting profile was curated from the canonical YAML in the separate
 `aboutme` repository. This site has no dependency on that repository. Publication
 IDs preserve the original IDs for cross-reference; narrative pages are edited

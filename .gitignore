@@ -5,3 +5,4 @@ src/.observablehq/
 test-results/
 playwright-report/
 .DS_Store
+/sign.png

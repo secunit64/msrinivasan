@@ -39,7 +39,10 @@ async function finalize() {
     $("head").append(
       `<link rel="canonical" href="${escapeHtml(url)}"><meta property="og:url" content="${escapeHtml(url)}">`,
     );
-    if (route !== "404.html") locations.push(url);
+    const noindex = ($('meta[name="robots"]').attr("content") || "")
+      .split(/[\s,]+/)
+      .includes("noindex");
+    if (route !== "404.html" && !noindex) locations.push(url);
     await writeFile(file, $.html());
   }
   await writeFile(

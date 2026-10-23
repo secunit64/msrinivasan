@@ -37,6 +37,17 @@ test("all pages work at root and project prefixes, without errors or overflow", 
       const response = await page.goto(prefix + route);
       expect(response.status()).toBe(200);
       await expect(page.locator("h1")).toBeVisible();
+      await expect(page.locator(".wordmark")).toHaveAccessibleName(
+        "Madhu Srinivasan, home",
+      );
+      await expect(page.locator(".wordmark img")).toHaveAttribute(
+        "src",
+        /sm-navigation(?:\.[a-f0-9]+)?\.svg$/,
+      );
+      await expect(page.locator('link[rel="icon"]')).toHaveAttribute(
+        "href",
+        /sm-navigation(?:\.[a-f0-9]+)?\.svg$/,
+      );
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= window.innerWidth,
@@ -176,4 +187,20 @@ test("current résumé works and obsolete documents return not found", async ({
     expect((await request.get(`/msrinivasan/${removed}`)).status()).toBe(404);
   }
   expect((await request.get("/msrinivasan/missing.html")).status()).toBe(404);
+});
+
+test("signature header fits a narrow mobile viewport", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 740 });
+  await page.goto("/msrinivasan/");
+  await expect(
+    page.getByRole("link", { name: "Madhu Srinivasan, home", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("navigation").getByRole("link", { name: "Publications" }),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
 });
