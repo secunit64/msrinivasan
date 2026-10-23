@@ -86,25 +86,28 @@ Refreshing the PDF is an explicit copy, not an automatic private-repository sync
 
 ## Deployment
 
-The verified Pages address is `https://secunit64.github.io/msrinivasan/`.
-GitHub Actions checks pull requests and builds/deploys pushes to `master` or
-`site/observable-profile`. The site branch is enabled for the initial release
-without merging it into `master`.
-Before releasing, approve the rendered content and current résumé, then
-switch **Settings → Pages → Source** to **GitHub Actions**. Pushing the workflow
-to either deployment branch or manually running it there can deploy: do not do so before approval.
-No repository visibility change is needed for this migration.
+The intended custom domain is `https://msrinivasan.com/`. GitHub Pages must use
+**GitHub Actions** as its publishing source, not legacy branch publishing.
+The workflow validates pull requests and site-branch pushes, but only `master`
+can deploy.
 
-The root `CNAME` records the previous domain `msrinivasan.com`. It is deliberately
-excluded from `dist/` because GitHub currently has no custom domain configured.
-Do not activate it or change DNS as part of an ordinary content update.
+The build reads the actual origin and base path from `actions/configure-pages`.
+Until the custom domain is successfully assigned in GitHub Pages, production
+builds keep using `https://secunit64.github.io/msrinivasan/`. Once assigned, the
+next deployment automatically uses the custom-domain root for canonical URLs,
+social URLs, the sitemap, and the 404 page.
 
-If a custom domain is approved later, configure it in GitHub Pages and update
-both `SITE_BASE` (for example `/`) and `SITE_URL` (an HTTPS URL ending in `/`) in
-the build environment. These default to `/msrinivasan/` and the address above.
-Verify navigation, canonical URLs, and the sitemap before deploying.
+Local builds default to `SITE_URL=https://msrinivasan.com/` and `SITE_BASE=/`.
+Set both variables to test a different origin and path. The root `CNAME` is kept
+as domain documentation; Actions publishing does not require or use a CNAME file
+in the deployment artifact.
 
-The remaining root legacy HTML, CSS, and JavaScript remain as the previous deployment's
-source until cutover; the new production build includes only the Framework
-site and the explicitly preserved documents. No obsolete analytics or jQuery
-is included in the new site.
+If GitHub reports that the domain is already taken, release it from the previous
+Pages repository or verify domain ownership under the `secunit64` account using
+the GitHub-provided DNS TXT record. Do not guess a verification value. The apex
+DNS already points to GitHub Pages; the recommended `www` CNAME target is
+`secunit64.github.io`. DNS-provider changes are separate from repository settings.
+
+After assigning the custom domain, provision/verify its HTTPS certificate, enable
+HTTPS enforcement, and rerun the `master` workflow. Confirm the apex, `www`
+redirect, assets, downloads, and canonical URLs before claiming the site is live.

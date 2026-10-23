@@ -15,9 +15,7 @@ export async function htmlFiles(directory) {
 }
 
 async function finalize() {
-  const site = new URL(
-    process.env.SITE_URL || "https://secunit64.github.io/msrinivasan/",
-  );
+  const site = new URL(process.env.SITE_URL || "https://msrinivasan.com/");
   if (!site.pathname.endsWith("/") || site.protocol !== "https:") {
     throw new Error("SITE_URL must be an HTTPS URL ending with /");
   }
@@ -49,7 +47,7 @@ async function finalize() {
     "dist/sitemap.xml",
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${locations.map((url) => `<url><loc>${escapeHtml(url)}</loc></url>`).join("")}</urlset>\n`,
   );
-  // CNAME is deliberately not copied: the configured Pages origin has no custom domain.
+  // Actions publishing uses the domain assigned in Pages settings, not a CNAME artifact.
   console.log(`Finalized ${locations.length} pages for ${site.href}`);
 }
 

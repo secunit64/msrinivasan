@@ -16,6 +16,9 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -25,16 +28,22 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run lint
       - run: npm test
-      - run: npm run build
-      - run: npm run check
+      - name: Read Pages domain and base path
+        id: pages
+        uses: actions/configure-pages@v4
+      - name: Build and validate for the configured Pages address
+        run: npm run build && npm run check
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path }}/
+          SITE_BASE: ${{ steps.pages.outputs.base_path || '/' }}
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:browser
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/site/observable-profile')
+        if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
         with:
           path: dist
   deploy:
-    if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/site/observable-profile')
+    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
     needs: check
     runs-on: ubuntu-latest
     permissions:

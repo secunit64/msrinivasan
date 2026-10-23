@@ -14,7 +14,7 @@ export default {
   dynamicPaths: ["/doc/resume.pdf"],
   markdownIt: publicationPlugin,
   preserveExtension: true,
-  base: process.env.SITE_BASE || "/msrinivasan/",
+  base: process.env.SITE_BASE || "/",
   head: siteHead,
   header: siteHeader,
   footer: siteFooter,

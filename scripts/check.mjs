@@ -23,6 +23,7 @@ for (const route of required) await access(`dist/${route}.html`);
 const pdf = await readFile("dist/doc/resume.pdf");
 assert.equal(pdf.subarray(0, 5).toString(), "%PDF-", "Invalid résumé PDF");
 const root = resolve("dist");
+const site = new URL(process.env.SITE_URL || "https://msrinivasan.com/");
 const pages = await htmlFiles("dist");
 let checked = 0;
 for (const file of pages) {
@@ -56,6 +57,27 @@ for (const file of pages) {
     1,
     `${file}: expected canonical URL`,
   );
+  const canonical = new URL(
+    file.replace(/^dist\//, "").replace(/^index\.html$/, ""),
+    site,
+  ).href;
+  assert.equal(
+    $('link[rel="canonical"]').attr("href"),
+    canonical,
+    `${file}: incorrect canonical origin or path`,
+  );
+  assert.equal(
+    $('meta[property="og:url"]').attr("content"),
+    canonical,
+    `${file}: incorrect social URL`,
+  );
+  if (file === "dist/404.html") {
+    assert.equal(
+      $("base").attr("href"),
+      site.pathname,
+      "404 base path must match the deployment address",
+    );
+  }
   assert(
     !html.includes("UA-139553465") && !html.includes("jquery"),
     `${file}: legacy scripts remain`,
@@ -110,6 +132,13 @@ assert.equal(
   "Hide inactive controls without JavaScript",
 );
 await access("dist/sitemap.xml");
+const sitemap = load(await readFile("dist/sitemap.xml", "utf8"), { xml: true });
+for (const location of sitemap("loc").toArray()) {
+  assert(
+    sitemap(location).text().startsWith(site.href),
+    "Sitemap must use the configured Pages address",
+  );
+}
 for (const removed of [
   "biography.html",
   "doc/biography.pdf",
