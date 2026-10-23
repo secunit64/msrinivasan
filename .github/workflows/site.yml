@@ -34,7 +34,7 @@ jobs:
       - name: Build and validate for the configured Pages address
         run: npm run build && npm run check
         env:
-          SITE_URL: ${{ steps.pages.outputs.origin }}${{ steps.pages.outputs.base_path }}/
+          SITE_URL: https://${{ steps.pages.outputs.host }}${{ steps.pages.outputs.base_path }}/
           SITE_BASE: ${{ steps.pages.outputs.base_path || '/' }}
       - run: npx playwright install --with-deps chromium webkit
       - run: npm run test:browser
