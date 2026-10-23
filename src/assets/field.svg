@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 430">
+<defs>
+<pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#dce5e4" stroke-width=".7"/></pattern>
+<path id="flow" d="M-40 280C90 340 65 60 210 90S255 360 510 125"/>
+<linearGradient id="fade" x2="1" y2="1"><stop stop-color="#f1f6f3"/><stop offset="1" stop-color="#e1ecee"/></linearGradient>
+</defs>
+<rect x="1" y="1" width="478" height="428" rx="8" fill="url(#fade)" stroke="#dce5e4"/>
+<rect x="24" y="24" width="432" height="382" fill="url(#grid)"/>
+<g fill="none" stroke="#427d98" stroke-width="1.1" opacity=".65">
+<use href="#flow" transform="translate(0 -65)"/><use href="#flow" transform="translate(0 -49)"/><use href="#flow" transform="translate(0 -33)"/><use href="#flow" transform="translate(0 -17)"/><use href="#flow"/><use href="#flow" transform="translate(0 17)"/><use href="#flow" transform="translate(0 33)"/><use href="#flow" transform="translate(0 49)"/><use href="#flow" transform="translate(0 65)"/>
+</g>
+<g fill="none" stroke="#7b9eac" stroke-width=".8" opacity=".45"><circle cx="226" cy="213" r="83"/><circle cx="226" cy="213" r="125"/><circle cx="226" cy="213" r="167"/></g>
+<g fill="#245d7c"><circle cx="177" cy="99" r="4"/><circle cx="311" cy="247" r="4"/><circle cx="400" cy="213" r="3"/></g>
+<path d="M24 378h40m-40 0v-40" fill="none" stroke="#52788a" stroke-width="1.3"/>
+<text x="34" y="400" font-family="monospace" font-size="9" fill="#536e7a">x / y / t</text>
+</svg>

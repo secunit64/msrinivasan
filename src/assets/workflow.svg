@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">
+<rect width="560" height="240" fill="#edf0ec"/>
+<g fill="none" stroke="#7f999e" stroke-width="1"><path d="M174 120h36m136 0h36"/><path d="m204 115 6 5-6 5m172-10 6 5-6 5"/></g>
+<g fill="#fafbf9" stroke="#b7c9ca">
+<rect x="38" y="60" width="136" height="120" rx="4"/><rect x="210" y="60" width="136" height="120" rx="4"/><rect x="382" y="60" width="136" height="120" rx="4"/>
+</g>
+<g fill="#d4e2e3" stroke="#6c939e">
+<path d="m78 108 26-15 26 15v30l-26 15-26-15Z"/><path d="m78 108 26 15 26-15m-26 15v30" fill="none"/>
+<rect x="244" y="98" width="25" height="21" rx="2"/><rect x="283" y="98" width="25" height="21" rx="2"/><rect x="244" y="128" width="25" height="21" rx="2"/><rect x="283" y="128" width="25" height="21" rx="2"/>
+<path d="M407 145V99h85v46Z"/><path d="M415 135c22-45 34 20 68-25" fill="none" stroke="#245d7c" stroke-width="2"/>
+</g>
+<g font-family="monospace" font-size="9" fill="#34596d" text-anchor="middle"><text x="106" y="204">SIMULATION</text><text x="278" y="204">DISTRIBUTED PROCESSING</text><text x="450" y="204">INTERACTIVE VIEW</text></g>
+</svg>
