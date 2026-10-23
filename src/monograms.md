@@ -94,7 +94,7 @@ index: false
 </div>
 <div class="context-preview" aria-hidden="true"><img src="./assets/monograms/sm-navigation.svg" class="vector-nav" alt="" width="45" height="32"><span class="mini-navigation">Projects <span>About</span></span></div>
 </div>
-<div class="study-description"><h3>The compact signature <span class="pick">Active</span></h3><p>A redraw for small sizes: fewer curves, even stroke weight, a clearer period, and a shorter lower S. Keeps the loop, diagonal crossing, and the M's rounded arches.</p><a class="vector-download" href="./assets/monograms/sm-navigation.svg" download="sm-navigation.svg">Download navigation SVG</a></div>
+<div class="study-description"><h3>The compact signature</h3><p>A redraw for small sizes: fewer curves, even stroke weight, a clearer period, and a shorter lower S. Keeps the loop, diagonal crossing, and the M's rounded arches.</p><a class="vector-download" href="./assets/monograms/sm-navigation.svg" download="sm-navigation.svg">Download navigation SVG</a></div>
 </article>
 
 </div>
@@ -202,11 +202,11 @@ index: false
 
 <article class="monogram-card recommended">
 <div class="monogram-stage">
-<span class="specimen-label">01 / Editorial</span>
+<span class="specimen-label" id="editorial-mark">01 / Editorial</span>
 <div class="monogram monogram-editorial" role="img" aria-label="m s, period">ms<span class="mark-dot">.</span></div>
 <div class="context-preview" aria-hidden="true"><span class="small-mark monogram-editorial">ms<span class="mark-dot">.</span></span><span class="mini-navigation">Projects <span>About</span></span></div>
 </div>
-<div class="study-description"><h2>The researcher's mark <span class="pick">Pick</span></h2><p>A quieter serif that echoes your page headings. My first choice if you want a more editorial identity.</p><span class="type-note">Georgia · regular · ms.</span></div>
+<div class="study-description"><h2>The researcher's mark <span class="pick">Active</span></h2><p>A quieter serif that echoes your page headings. This is the selected monogram for the site header and favicon.</p><span class="type-note">Georgia · regular · ms.</span></div>
 </article>
 
 <article class="monogram-card recommended">
@@ -279,9 +279,9 @@ index: false
 
 ## Where I would start
 
-**16, Navigation-ready**, uses your own letter shapes and is my first choice for the site header. **15, Faithful trace**, keeps more of your actual handwriting and is worth comparing at larger sizes.
+**01, Editorial: The researcher's mark**, is now the selected identity, pairing a regular Georgia serif with a blue period.
 
-The navigation-ready SVG is now used in the site header and favicon. Both custom vectors and all earlier studies are retained here.
+Both custom signature vectors and all earlier studies are retained here for future use.
 
 </section>
 

@@ -69,21 +69,23 @@ summary:focus-visible {
   justify-content: space-between;
   gap: 20px;
 }
-.wordmark {
+#observablehq-header .wordmark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 56px;
   min-height: 44px;
   flex-shrink: 0;
-  color: #142833;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: #203d54;
   text-decoration: none;
 }
-.wordmark img {
-  display: block;
-  width: 56px;
-  height: 40px;
-  object-fit: contain;
+#observablehq-header .wordmark span {
+  color: #397393;
 }
 .site-nav nav {
   display: flex;

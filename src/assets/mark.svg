@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#203d54"/><path d="M12 44V22h7l7 13 7-13h7v22h-6V32l-8 13-8-13v12Z" fill="#fff"/><circle cx="48" cy="41" r="4" fill="#b7d5e8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">The researcher's mark: editorial ms.</title>
+  <rect width="64" height="64" rx="12" fill="#fafbf9"/>
+  <text x="4" y="47" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="400" letter-spacing="-3.2" textLength="56" lengthAdjust="spacingAndGlyphs" fill="#203d54">ms<tspan fill="#397393">.</tspan></text>
+</svg>

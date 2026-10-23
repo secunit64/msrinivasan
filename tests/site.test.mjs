@@ -2,7 +2,12 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { load } from "cheerio";
-import { escapeHtml, relativeRoot, siteHeader } from "../scripts/layout.mjs";
+import {
+  escapeHtml,
+  relativeRoot,
+  siteHeader,
+  siteHead,
+} from "../scripts/layout.mjs";
 import {
   publicationMarkup,
   validatePublications,
@@ -22,6 +27,25 @@ test("navigation resolves relative to nested pages and marks the active section"
   const $ = load(siteHeader({ path: "/projects/red-sea-atlas" }));
   assert.equal($('a[aria-current="page"]').text(), "Projects");
   assert.equal($('a[aria-current="page"]').attr("href"), "../projects.html");
+});
+
+test("editorial ms. branding uses text and the matching favicon", async () => {
+  const $ = load(siteHeader({ path: "/index" }));
+  assert.equal($(".wordmark").text(), "ms.");
+  assert.equal($(".wordmark img").length, 0);
+  assert.equal($(".wordmark").attr("aria-label"), "Madhu Srinivasan, home");
+  assert(
+    siteHead({ title: "Home", path: "/index" }).includes(
+      'href="./assets/mark.svg"',
+    ),
+  );
+  const favicon = load(
+    await readFile(new URL("../src/assets/mark.svg", import.meta.url), "utf8"),
+    { xml: true },
+  );
+  assert.equal(favicon("text").text(), "ms.");
+  assert.equal(favicon("text").attr("font-weight"), "400");
+  assert(favicon("text").attr("font-family").includes("Georgia"));
 });
 
 test("bibliography is static, ordered, complete and escaped", () => {
