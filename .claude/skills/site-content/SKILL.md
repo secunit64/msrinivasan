@@ -25,15 +25,16 @@ depends on it.
 
 ## Pages and what each owns
 
-| File                                   | Owns                                                                                         |
-| -------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `src/index.md`                         | hero sentence, the one-line caption under the hero figure, career strip, project cards, note |
-| `src/about.md`                         | the narrative bio, `.timeline` of roles, education, contact links, résumé link               |
-| `src/projects.md`, `src/projects/*.md` | case studies (RedSeaAtlas, large-scale visualization)                                        |
-| `src/publications.md`                  | lede and Scholar link; the list itself comes from JSON                                       |
-| `src/resume.md`, `src/resume-long.md`  | résumé download page and the legacy `resume-long.html` pointer                               |
-| `src/404.md`                           | not-found page                                                                               |
-| `scripts/layout.mjs`                   | site title, description, nav labels, footer tagline and links                                |
+| File                                   | Owns                                                                                                                                                 |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `src/index.md`                         | hero sentence, the one-line caption under the hero figure, career strip, project cards, note                                                         |
+| `src/about.md`                         | the narrative bio (mirrors the résumé summary), `.timeline` of roles with the résumé's top three bullets each, education, contact links, résumé link |
+| `src/cv.md`                            | skills, awards and invited talks, committee service, mentoring (the CV sections not on About)                                                        |
+| `src/projects.md`, `src/projects/*.md` | case studies (RedSeaAtlas, large-scale visualization)                                                                                                |
+| `src/publications.md`                  | lede and Scholar link; the list itself comes from JSON                                                                                               |
+| `src/resume.md`, `src/resume-long.md`  | résumé download page and the legacy `resume-long.html` pointer                                                                                       |
+| `src/404.md`                           | not-found page                                                                                                                                       |
+| `scripts/layout.mjs`                   | site title, description, nav labels, footer tagline and links                                                                                        |
 
 The same facts appear in several places. When a role, title, date or the
 résumé date changes, grep for the old value across `src/` and
@@ -42,12 +43,17 @@ the career strip, the About timeline, `resume.md` (eyebrow and link text),
 `about.md` (link text) and any project page `.project-meta`.
 
 Current facts the pages state (verify against `../aboutme` before changing):
-AMD Research, Principal Research Staff, Graphics and World Models, 2022 to
-present; HPE Cray, Lead Scientist, Visualization and Machine Learning,
-2019 to 2022; KAUST Visualization Core Lab, Lead Scientist 2014 to 2019 and
-Visualization Scientist 2009 to 2014; Laika Studios, Technical Director,
-2008; PhD 2009 and MS 2005 in Computer Science from Oregon State
-University; B.Engg. Computer Science, Maharaja Sayajirao University, 2001.
+AMD Research, Principal Research Staff, Graphics and World Models, May 2022
+to present, leading a team of four, 20 patent applications, six university
+labs; HPE Cray, Lead Scientist, Visualization and Machine Learning, Sep 2019
+to Apr 2022; KAUST Visualization Core Lab, Lead Scientist Jul 2014 to Jul
+2019 and Visualization Scientist Apr 2009 to Jun 2014; Laika Studios,
+Technical Director, Aug to Dec 2008; PhD 2009 and MS 2005 in Computer
+Science from Oregon State University; B.Engg. Computer Science, Maharaja
+Sayajirao University, 2001. Role bullets are the résumé's first three per
+role, reworded into past tense for past roles; numbers in them (130 fps,
+75x, $10 million) come from the public résumé and are not to be extended
+with figures that are not in it.
 
 ## Links
 
@@ -58,10 +64,16 @@ University; B.Engg. Computer Science, Maharaja Sayajirao University, 2001.
   Google Scholar `https://scholar.google.com/citations?user=GxzYUjQAAAAJ`,
   GitHub `https://github.com/secunit64` and `https://github.com/madhuatx`
   (both are required in every footer; `check` asserts it), LinkedIn
-  `https://www.linkedin.com/in/madsrini/`, email
-  `madhu.srinivasan@outlook.com`. The old `github.com/neuralvis` link is
-  banned by `check`.
-- External URLs in content must be `https:`.
+  `https://www.linkedin.com/in/madsrini/`, X `https://x.com/secunit64`,
+  email `madhu.srinivasan@outlook.com`. The old `github.com/neuralvis` link
+  is banned by `check`. The résumé omits GitHub on purpose; the site keeps
+  it because Madhu chose to list both accounts here.
+- External URLs in content must be `https:` and must actually resolve. Old
+  conference sites die: check with `curl -sIL` before linking, and write
+  plain text (no link) when nothing answers. Sites behind a Cloudflare
+  challenge (SC14, SC15, earthdoc) return 403 to curl but work in a browser.
+  Dagstuhl report links all use the `drops.dagstuhl.de/opus/volltexte/2019/10178/...`
+  path with `#page=N`; the `dagrep-complete/2018` mirror is blocked.
 
 ## Publications
 
@@ -84,27 +96,29 @@ topic filter options derived from the data). Schema, enforced by
 }
 ```
 
-Status vocabulary in use: `Accepted`, `Conference paper`, `Journal article`,
-`Report contribution`, `Manuscript`. Add `Under review` only if Madhu asks
-to list a paper that is not yet accepted, and say so plainly. Topic
-vocabulary in use: `AI`, `Multimodal`, `Diffusion`, `HPC`, `Visualization`,
-`Earth science`, `Marine ecology`, `VR`, `Graphics`, `Animation`. Reuse an
-existing topic before adding one; each new topic becomes a filter option.
+Status vocabulary in use: `Under review`, `Accepted`, `Conference paper`,
+`Journal article`, `Report contribution`, `Technical report`, `Manuscript`.
+Topic vocabulary in use: `AI`, `World models`, `Multimodal`, `Diffusion`,
+`HPC`, `Visualization`, `Earth science`, `Marine ecology`, `VR`, `Graphics`,
+`Animation`. Reuse an existing topic before adding one; each new topic
+becomes a filter option.
 
 Rules that have already been decided:
 
-- Pareto LoRA (WACV 2027) is listed as **Accepted** and links to arXiv.
-- Vera (under review at ICLR) is **not** listed. Ask before adding
-  anything that is submitted but not accepted.
-- LoRaQ is team work Madhu did not author. It is never listed.
+- The list mirrors the full CV (`../aboutme/content/publications.yaml`,
+  20 entries as of October 2026) in the CV's order, so Vera (ICLR 2027,
+  **Under review**) sits first and Pareto LoRA (WACV 2027, **Accepted**)
+  second. When a status changes in the CV, change it here the same day.
+- LoRaQ is team work Madhu did not author. It is never listed as a
+  publication; the About page describes it as enablement, as the résumé does.
 - Only papers Madhu authored go in; talks, posters and internal reports do
   not, unless asked.
 
 When the count or the composition changes, update
-`tests/browser/site.spec.js` on purpose: the first-item id
-(`pub-pareto-lora`), the `AI` (1), `HPC` (3) and `Marine ecology` (1) filter
-counts and the singular/plural status text. The total is read from the JSON
-so it does not need editing.
+`tests/browser/site.spec.js` on purpose: the first-item id (`pub-vera`), the
+`AI` (2), `HPC` (5) and `Marine ecology` (1) filter counts and the
+singular/plural status text. The total is read from the JSON so it does not
+need editing.
 
 ## The public/private boundary
 
@@ -113,13 +127,17 @@ The site is public and indexed. Do not import from `../aboutme` or add:
 - phone numbers, postal addresses, date of birth, visa or citizenship
   details, salary or compensation;
 - internal AMD, HPE or KAUST tool, codename, project or customer names;
-- unpublished metrics, speedups, model sizes or benchmark numbers;
-- patents or invention disclosures;
+- metrics, speedups, model sizes or benchmark numbers that are not in the
+  public résumé;
+- patent titles or invention disclosures (the application count in the
+  résumé summary is fine);
 - anything marked private or internal in `aboutme` YAML.
 
-The résumé PDF deliberately contains more (email, a short list of employer
-projects). That is Madhu's call, made per document. Do not paraphrase PDF
-detail into the pages.
+The public résumé PDF and the CV in `../aboutme` define what is already
+public: facts that appear there may go on the pages; facts that do not
+(for example the name of the internal research framework in the CV's AMD
+bullets, or the phone number) stay out. The CV PDF itself is not published
+on the site for that reason; only the résumé PDF is.
 
 Never invent a fact. If a venue, year, collaborator or date is unknown,
 write `TODO(madhu): <question>` in the Markdown and stop; the build check
@@ -142,7 +160,8 @@ Madhu asks for a newer résumé:
 3. Copy it byte for byte: `cp ../aboutme/build/resume/resume.pdf doc/resume.pdf`
    then compare `shasum -a 256` of both files.
 4. Update the date in `src/resume.md` (eyebrow and link text) and the link
-   text in `src/about.md`. The route is fixed at `/doc/resume.pdf` by
+   text in `src/about.md`, `src/cv.md`, `src/resume-long.md` and
+   `README.md`. The route is fixed at `/doc/resume.pdf` by
    `src/doc/resume.pdf.js` and `dynamicPaths` in `observablehq.config.ts`;
    do not rename it, external links point at it.
 5. `npm run build && npm run check` verifies the PDF header and the link.

@@ -13,6 +13,7 @@ const required = [
   "projects",
   "publications",
   "about",
+  "cv",
   "resume",
   "resume-long",
   "404",

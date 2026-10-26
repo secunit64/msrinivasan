@@ -22,5 +22,6 @@ export default {
     { name: "Projects", path: "/projects" },
     { name: "Publications", path: "/publications" },
     { name: "About", path: "/about" },
+    { name: "CV", path: "/cv" },
   ],
 };

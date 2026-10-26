@@ -374,6 +374,35 @@ summary:focus-visible {
   color: #55636a;
   margin: 6px 0 0;
 }
+.timeline-item ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #3f4f57;
+}
+.timeline-item li {
+  margin-bottom: 8px;
+}
+.timeline-item a[href] {
+  text-decoration: underline;
+}
+.skills {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 14px 26px;
+  margin: 24px 0 8px;
+  font-size: 14px;
+}
+.skills dt {
+  font-weight: 550;
+  color: #243b47;
+}
+.skills dd {
+  margin: 0;
+  color: #55636a;
+  line-height: 1.7;
+}
 .publication-controls {
   display: flex;
   align-items: center;
@@ -528,6 +557,13 @@ summary:focus-visible {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+  .skills {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .skills dd {
+    margin-bottom: 10px;
+  }
   .site-footer {
     padding: 26px 22px;
     flex-direction: column;
@@ -546,7 +582,9 @@ summary:focus-visible {
     padding-right: 18px;
   }
   .site-nav nav {
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0 12px;
   }
   .site-nav nav a {
     font-size: 11px;

@@ -66,18 +66,21 @@ The starting profile was curated from the canonical YAML in the separate
 IDs preserve the original IDs for cross-reference; narrative pages are edited
 here. No automatic private-to-public synchronization takes place.
 
-The publication list includes Pareto LoRA as **accepted at WACV 2027**, matching
-the current résumé; it links to the arXiv record. Other recent AMD papers remain
-excluded until requested. Internal tool names, performance measurements, patents,
-and unpublished employer information were not imported into narrative pages.
-LoRaQ is not an authored publication and is not listed. New entries must preserve
-accurate authorship and distinguish manuscripts, accepted papers, and published work.
+The publication list mirrors the full CV in `../aboutme`: Pareto LoRA is
+**accepted at WACV 2027** and Vera is marked **under review** (ICLR 2027), both
+matching the current résumé. LoRaQ is not an authored publication and is not
+listed; the About page credits it as enablement, as the résumé does. New entries
+must preserve accurate authorship and distinguish manuscripts, accepted papers,
+and published work. The About page carries the résumé's summary and top bullets
+per role; the CV page (`src/cv.md`) carries skills, awards and talks, service,
+and mentoring. Internal tool names and anything not in the public résumé or CV
+stay out of the pages.
 
 All SVG diagrams in `src/assets/` were created for this site. They are illustrative,
 not research results or project screenshots. No images were copied from the
 private source repository.
 
-The main `doc/resume.pdf` is the user-requested October 22, 2026 résumé, copied
+The main `doc/resume.pdf` is the user-requested October 25, 2026 résumé, copied
 unchanged from `../aboutme/build/resume/resume.pdf`. Only the current résumé is
 kept on the website; older document sources remain in `../aboutme`.
 The PDF contains contact information and includes

@@ -6,4 +6,4 @@ title: CV and résumé
 
 # CV and résumé
 
-You can [download my current résumé (PDF)](./doc/resume.pdf), read my [background](./about.html), or browse my [publications](./publications.html).
+The full record now lives on the [CV page](./cv.html). You can also [download my current résumé (PDF, October 25, 2026)](./doc/resume.pdf), read my [background](./about.html), or browse my [publications](./publications.html).

@@ -42,6 +42,7 @@ export function siteHeader({ path }) {
     ["Projects", "projects"],
     ["Publications", "publications"],
     ["About", "about"],
+    ["CV", "cv"],
   ];
   return `<a class="skip-link" href="#content">Skip to content</a>
     <div class="site-nav">

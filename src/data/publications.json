@@ -1,5 +1,15 @@
 [
   {
+    "id": "pub-vera",
+    "year": 2027,
+    "title": "Vera: Decoupled Simulation for Efficient and Physically-Grounded World Modeling",
+    "authors": "Rishi Upadhyay, Aporva Amarnath, Sophie Yáng Shen, Achuta Kadambi, Mark Nutter, Madhusudhanan Srinivasan",
+    "venue": "International Conference on Learning Representations (ICLR 2027)",
+    "status": "Under review",
+    "topics": ["AI", "World models"],
+    "url": "https://openreview.net/forum?id=ZiIvCZo9nP"
+  },
+  {
     "id": "pub-pareto-lora",
     "year": 2027,
     "title": "Pareto LoRA: Mitigating Modality Imbalance in Unified Multimodal Models via Pareto-Optimal Gradient Integration",
@@ -18,6 +28,16 @@
     "status": "Conference paper",
     "topics": ["HPC", "Visualization"],
     "url": "https://cug.org/proceedings/cug2021_proceedings/includes/files/pap115s2-file1.pdf"
+  },
+  {
+    "id": "pub-dagstuhl-workflow",
+    "year": 2019,
+    "title": "Insitu Workflow Specification",
+    "authors": "M. Parashar, P. Bremer, K. Heitmann, M. Larsen, J. Patchett, T. Peterka, M. Srinivasan, N. Röber, S. Frey, B. Raffin",
+    "venue": "In Situ Visualization for Computational Science, Dagstuhl Reports 8(7), p. 13",
+    "status": "Report contribution",
+    "topics": ["HPC", "Visualization"],
+    "url": "https://drops.dagstuhl.de/opus/volltexte/2019/10178/pdf/dagrep-v008-i007-complete.pdf#page=15"
   },
   {
     "id": "pub-redseaatlas",
@@ -102,6 +122,16 @@
     "video": "https://vimeo.com/60426001"
   },
   {
+    "id": "pub-stereo-panoramas",
+    "year": 2011,
+    "title": "Acquisition of stereo panoramas for display in VR environments",
+    "authors": "Richard A. Ainsworth, Daniel J. Sandin, Jurgen P. Schulze, Andrew Prudhomme, Thomas A. DeFanti, Madhusudhanan Srinivasan",
+    "venue": "Proc. SPIE 7864, 786416",
+    "status": "Conference paper",
+    "topics": ["VR", "Graphics"],
+    "url": "https://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=730670"
+  },
+  {
     "id": "pub-future-cave",
     "year": 2011,
     "title": "The Future of the CAVE",
@@ -112,6 +142,26 @@
     "url": "https://link.springer.com/article/10.2478/s13531-010-0002-5"
   },
   {
+    "id": "pub-digital-makkah",
+    "year": 2011,
+    "title": "Towards a Digital Makkah: Using Immersive 3D Environments to Train and Prepare Pilgrims",
+    "authors": "Jens Schneider, Dina Garatly, Madhusudhanan Srinivasan, Stephen Guy, Sean Curtis, Steven Cutchin, Dinesh Manocha, Ming Lin, Alyn Rockwood",
+    "venue": "International Conference on Digital Media and its Applications in Cultural Heritage (DMACH)",
+    "status": "Conference paper",
+    "topics": ["VR", "Graphics"],
+    "url": "https://gamma-web.iacs.umd.edu/papers/documents/articles/2011/schneider11.pdf"
+  },
+  {
+    "id": "pub-reverse-time-migration",
+    "year": 2010,
+    "title": "Multisource Reverse-Time Migration and Full-Waveform Inversion on a GPGPU",
+    "authors": "C. Boonyasiriwat, G. Zhan, M. Hadwiger, M. Srinivasan, G. T. Schuster",
+    "venue": "72nd EAGE Conference and Exhibition incorporating SPE EUROPEC",
+    "status": "Conference paper",
+    "topics": ["HPC", "Earth science"],
+    "url": "https://doi.org/10.3997/2214-4609.201401241"
+  },
+  {
     "id": "pub-mobility-maps",
     "year": 2005,
     "title": "Controllable real-time locomotion using mobility maps",
@@ -120,6 +170,26 @@
     "status": "Conference paper",
     "topics": ["Graphics", "Animation"],
     "url": "https://dl.acm.org/citation.cfm?id=1089518"
+  },
+  {
+    "id": "pub-pedestrian-model",
+    "year": 2005,
+    "title": "A Data-Driven Model of Pedestrian Movement",
+    "authors": "L. Casburn, M. Srinivasan, R. Metoyer, M. Quinn",
+    "venue": "3rd International Conference on Pedestrian and Evacuation Dynamics, pp. 189–200",
+    "status": "Conference paper",
+    "topics": ["Graphics", "Animation"],
+    "url": "https://doi.org/10.1007/978-3-540-47064-9_17"
+  },
+  {
+    "id": "pub-responsiveness-metric",
+    "year": 2005,
+    "title": "A Responsiveness Metric for Controllable Characters",
+    "authors": "M. Srinivasan, R. Metoyer",
+    "venue": "Oregon State University, School of EECS, Technical Report CS05-50-01",
+    "status": "Technical report",
+    "topics": ["Graphics", "Animation"],
+    "url": "https://ir.library.oregonstate.edu/downloads/3j333377p"
   },
   {
     "id": "pub-tangible-interface",

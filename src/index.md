@@ -4,12 +4,12 @@ title: Madhu Srinivasan
 
 <section class="hero" aria-labelledby="profile-title">
 <div>
-<p class="eyebrow">Research · Graphics · AI</p>
+<p class="eyebrow">World models · Generative graphics · Efficient AI</p>
 <h1 id="profile-title">Madhu<br>Srinivasan</h1>
 <p class="hero-intro">I work on generative world models, real-time graphics, and efficient AI.</p>
-<p>Principal Research Staff at AMD Research. Previously Lead Scientist at HPE Cray and founding staff of KAUST's Visualization Core Lab.</p>
+<p>Principal Research Staff at AMD Research, where I lead the team that built the company's world-model research agenda and its real-time generative video model. Previously Lead Scientist at HPE Cray and founding staff of KAUST's Visualization Core Lab.</p>
 <div class="hero-links"><a class="primary-link" href="./projects.html">Explore my work <span aria-hidden="true">↗</span></a></div>
-<div class="contact-links"><a href="mailto:madhu.srinivasan@outlook.com">Email</a><a href="https://scholar.google.com/citations?user=GxzYUjQAAAAJ">Google Scholar</a><a href="https://github.com/secunit64">GitHub · secunit64</a><a href="https://github.com/madhuatx">GitHub · madhuatx</a><a href="https://www.linkedin.com/in/madsrini/">LinkedIn</a><a href="./doc/resume.pdf">Résumé (PDF)</a></div>
+<div class="contact-links"><a href="mailto:madhu.srinivasan@outlook.com">Email</a><a href="https://scholar.google.com/citations?user=GxzYUjQAAAAJ">Google Scholar</a><a href="https://github.com/secunit64">GitHub · secunit64</a><a href="https://github.com/madhuatx">GitHub · madhuatx</a><a href="https://www.linkedin.com/in/madsrini/">LinkedIn</a><a href="https://x.com/secunit64">X · @secunit64</a><a href="./doc/resume.pdf">Résumé (PDF)</a></div>
 </div>
 <figure class="hero-figure">
 <img src="./assets/field.svg" alt="An abstract blue vector field with curved paths on a pale grid." width="480" height="430">

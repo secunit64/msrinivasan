@@ -61,8 +61,9 @@ address; local defaults are `https://msrinivasan.com/` and `/`.
    regenerated and gitignored. Deleting a page means deleting its file; an
    empty `.md` still builds into a page and fails `check`.
 2. **Everything on the site is public.** No phone number, no internal tool
-   or project names, no unpublished metrics, no patents, no employer-internal
-   detail. Never invent a fact, date, venue or collaborator; if something is
+   or project names, no metrics or patent detail beyond what the public
+   résumé states, no employer-internal detail. Never invent a fact, date,
+   venue or collaborator; if something is
    missing, write `TODO(madhu): <question>` in the source and stop (`check`
    fails on any `TODO(` left in `dist/`). Publications carry accurate
    authorship and status; LoRaQ is team work Madhu did not author and is not
