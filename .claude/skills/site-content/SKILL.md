@@ -53,7 +53,7 @@ Maharaja Sayajirao University, 2001.
 
 The AMD role is described in Madhu's own words, in the present tense
 because the role is current: he leads a team that investigated and built
-the company's world-model agenda and built fine-tuning pipelines, including
+the company's world-model research agenda and built fine-tuning pipelines, including
 post-training pipelines, for world models ("I lead a team that...").
 Do not state the team size, the patent-application count, the list of
 partner universities or the "real-time generative video model" phrase from

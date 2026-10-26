@@ -9,7 +9,7 @@ title: About
 <div class="article">
 <p class="lede">I'm Madhu Srinivasan, a researcher working at the intersection of computer graphics, generative AI, and scientific visualization.</p>
 
-As Principal Research Staff at AMD Research, I lead a team that investigated and built the company's world-model agenda, and built fine-tuning pipelines, including post-training pipelines, for world models.
+As Principal Research Staff at AMD Research, I lead a team that investigated and built the company's world-model research agenda, and built fine-tuning pipelines, including post-training pipelines, for world models.
 
 I have spent 17+ years in research and research leadership. Before AMD, I was Lead Scientist for Visualization and Machine Learning at HPE Cray. Earlier, I was founding staff of KAUST's Visualization Core Lab, working with researchers in climate science, combustion, marine ecology, and neuroscience. That work involved distributed graphics, immersive virtual reality, and the practical task of making large datasets useful to scientists.
 

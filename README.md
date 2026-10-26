@@ -73,7 +73,7 @@ public. LoRaQ is not an authored publication and is not listed; the About page
 credits it as enablement, as the résumé does. New entries must preserve accurate
 authorship and distinguish manuscripts, accepted papers, and published work. The
 About page describes the AMD role as leading a team that investigated and built
-the world-model agenda and its fine-tuning and post-training pipelines, without
+the world-model research agenda and its fine-tuning and post-training pipelines, without
 team size, patent counts or partner lists; it carries the résumé's top bullets
 per role. The CV page (`src/cv.md`) carries skills, awards and talks, service,
 and mentoring. Internal tool names and anything not in the public résumé or CV
