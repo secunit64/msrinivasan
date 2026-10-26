@@ -51,9 +51,10 @@ Studios, Technical Director, Aug to Dec 2008; PhD 2009 and MS 2005 in
 Computer Science from Oregon State University; B.Engg. Computer Science,
 Maharaja Sayajirao University, 2001.
 
-The AMD role is described in Madhu's own words: he led a team that
-investigated and built the company's world-model agenda and built
-fine-tuning pipelines, including post-training pipelines, for world models.
+The AMD role is described in Madhu's own words, in the present tense
+because the role is current: he leads a team that investigated and built
+the company's world-model agenda and built fine-tuning pipelines, including
+post-training pipelines, for world models ("I lead a team that...").
 Do not state the team size, the patent-application count, the list of
 partner universities or the "real-time generative video model" phrase from
 the résumé summary; Madhu asked for those to stay off the website even

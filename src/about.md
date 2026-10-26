@@ -9,7 +9,7 @@ title: About
 <div class="article">
 <p class="lede">I'm Madhu Srinivasan, a researcher working at the intersection of computer graphics, generative AI, and scientific visualization.</p>
 
-As Principal Research Staff at AMD Research, I led a team that investigated and built the company's world-model agenda, and built fine-tuning pipelines, including post-training pipelines, for world models.
+As Principal Research Staff at AMD Research, I lead a team that investigated and built the company's world-model agenda, and built fine-tuning pipelines, including post-training pipelines, for world models.
 
 I have spent 17+ years in research and research leadership. Before AMD, I was Lead Scientist for Visualization and Machine Learning at HPE Cray. Earlier, I was founding staff of KAUST's Visualization Core Lab, working with researchers in climate science, combustion, marine ecology, and neuroscience. That work involved distributed graphics, immersive virtual reality, and the practical task of making large datasets useful to scientists.
 
@@ -18,7 +18,7 @@ I have spent 17+ years in research and research leadership. Before AMD, I was Le
 <div class="timeline">
 <div class="timeline-item"><div class="timeline-date">May 2022 to present</div><div><strong>AMD Research</strong>, Austin, TX<p>Principal Research Staff, Graphics and World Models</p>
 <ul>
-<li>Led a team that investigated and built AMD's research agenda on world models and its implications for AMD hardware and software: consistent long-context generation, fine-grained control of camera, objects and scene elements, and real-time inference on small form-factor silicon.</li>
+<li>Lead a team that investigated and built AMD's research agenda on world models and its implications for AMD hardware and software: consistent long-context generation, fine-grained control of camera, objects and scene elements, and real-time inference on small form-factor silicon.</li>
 <li>Built fine-tuning pipelines for world models, including post-training pipelines.</li>
 <li>Demonstrated 130 fps streaming on Instinct GPUs using diffusion-forcing techniques with video foundation models, and a 75x speedup over the baseline on ROCm.</li>
 <li>Enabled <a href="https://arxiv.org/abs/2604.18117">LoRaQ</a>, a data-free method for 4-bit post-training quantization of diffusion transformers with no loss of quality, completing a fully sub-16-bit pipeline (NeurIPS 2026).</li>
