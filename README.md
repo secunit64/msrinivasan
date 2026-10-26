@@ -84,6 +84,15 @@ The PDF contains contact information and includes
 employer details omitted from the narrative pages. Review them before deployment.
 Refreshing the PDF is an explicit copy, not an automatic private-repository sync.
 
+## Agents
+
+Coding agents (Claude Code, Cursor, Warp) read `AGENTS.md` for the shared
+rules and the four skills under `.claude/skills/`: `site-design`,
+`site-content`, `site-build` and `site-deploy`. `CLAUDE.md` only imports
+`AGENTS.md`. Keep those files current when a convention, command or
+deployment setting changes; they are the project memory for anyone working
+with an agent.
+
 ## Deployment
 
 The intended custom domain is `https://msrinivasan.com/`. GitHub Pages must use
