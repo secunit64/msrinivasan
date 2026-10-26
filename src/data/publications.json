@@ -1,15 +1,5 @@
 [
   {
-    "id": "pub-vera",
-    "year": 2027,
-    "title": "Vera: Decoupled Simulation for Efficient and Physically-Grounded World Modeling",
-    "authors": "Rishi Upadhyay, Aporva Amarnath, Sophie Yáng Shen, Achuta Kadambi, Mark Nutter, Madhusudhanan Srinivasan",
-    "venue": "International Conference on Learning Representations (ICLR 2027)",
-    "status": "Under review",
-    "topics": ["AI", "World models"],
-    "url": "https://openreview.net/forum?id=ZiIvCZo9nP"
-  },
-  {
     "id": "pub-pareto-lora",
     "year": 2027,
     "title": "Pareto LoRA: Mitigating Modality Imbalance in Unified Multimodal Models via Pareto-Optimal Gradient Integration",

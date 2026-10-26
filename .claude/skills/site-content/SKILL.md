@@ -25,16 +25,16 @@ depends on it.
 
 ## Pages and what each owns
 
-| File                                   | Owns                                                                                                                                                 |
-| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src/index.md`                         | hero sentence, the one-line caption under the hero figure, career strip, project cards, note                                                         |
-| `src/about.md`                         | the narrative bio (mirrors the résumé summary), `.timeline` of roles with the résumé's top three bullets each, education, contact links, résumé link |
-| `src/cv.md`                            | skills, awards and invited talks, committee service, mentoring (the CV sections not on About)                                                        |
-| `src/projects.md`, `src/projects/*.md` | case studies (RedSeaAtlas, large-scale visualization)                                                                                                |
-| `src/publications.md`                  | lede and Scholar link; the list itself comes from JSON                                                                                               |
-| `src/resume.md`, `src/resume-long.md`  | résumé download page and the legacy `resume-long.html` pointer                                                                                       |
-| `src/404.md`                           | not-found page                                                                                                                                       |
-| `scripts/layout.mjs`                   | site title, description, nav labels, footer tagline and links                                                                                        |
+| File                                   | Owns                                                                                                              |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `src/index.md`                         | hero sentence, the one-line caption under the hero figure, career strip, project cards, note                      |
+| `src/about.md`                         | the narrative bio, `.timeline` of roles with the résumé's top bullets each, education, contact links, résumé link |
+| `src/cv.md`                            | skills, awards and invited talks, committee service, mentoring (the CV sections not on About)                     |
+| `src/projects.md`, `src/projects/*.md` | case studies (RedSeaAtlas, large-scale visualization)                                                             |
+| `src/publications.md`                  | lede and Scholar link; the list itself comes from JSON                                                            |
+| `src/resume.md`, `src/resume-long.md`  | résumé download page and the legacy `resume-long.html` pointer                                                    |
+| `src/404.md`                           | not-found page                                                                                                    |
+| `scripts/layout.mjs`                   | site title, description, nav labels, footer tagline and links                                                     |
 
 The same facts appear in several places. When a role, title, date or the
 résumé date changes, grep for the old value across `src/` and
@@ -44,16 +44,23 @@ the career strip, the About timeline, `resume.md` (eyebrow and link text),
 
 Current facts the pages state (verify against `../aboutme` before changing):
 AMD Research, Principal Research Staff, Graphics and World Models, May 2022
-to present, leading a team of four, 20 patent applications, six university
-labs; HPE Cray, Lead Scientist, Visualization and Machine Learning, Sep 2019
-to Apr 2022; KAUST Visualization Core Lab, Lead Scientist Jul 2014 to Jul
-2019 and Visualization Scientist Apr 2009 to Jun 2014; Laika Studios,
-Technical Director, Aug to Dec 2008; PhD 2009 and MS 2005 in Computer
-Science from Oregon State University; B.Engg. Computer Science, Maharaja
-Sayajirao University, 2001. Role bullets are the résumé's first three per
-role, reworded into past tense for past roles; numbers in them (130 fps,
-75x, $10 million) come from the public résumé and are not to be extended
-with figures that are not in it.
+to present; HPE Cray, Lead Scientist, Visualization and Machine Learning,
+Sep 2019 to Apr 2022; KAUST Visualization Core Lab, Lead Scientist Jul 2014
+to Jul 2019 and Visualization Scientist Apr 2009 to Jun 2014; Laika
+Studios, Technical Director, Aug to Dec 2008; PhD 2009 and MS 2005 in
+Computer Science from Oregon State University; B.Engg. Computer Science,
+Maharaja Sayajirao University, 2001.
+
+The AMD role is described in Madhu's own words: he led a team that
+investigated and built the company's world-model agenda and built
+fine-tuning pipelines, including post-training pipelines, for world models.
+Do not state the team size, the patent-application count, the list of
+partner universities or the "real-time generative video model" phrase from
+the résumé summary; Madhu asked for those to stay off the website even
+though the résumé PDF contains them. Role bullets are otherwise the
+résumé's first three per role, reworded into past tense for past roles;
+numbers in them (130 fps, 75x, $10 million) come from the public résumé and
+are not to be extended with figures that are not in it.
 
 ## Links
 
@@ -96,29 +103,30 @@ topic filter options derived from the data). Schema, enforced by
 }
 ```
 
-Status vocabulary in use: `Under review`, `Accepted`, `Conference paper`,
-`Journal article`, `Report contribution`, `Technical report`, `Manuscript`.
-Topic vocabulary in use: `AI`, `World models`, `Multimodal`, `Diffusion`,
-`HPC`, `Visualization`, `Earth science`, `Marine ecology`, `VR`, `Graphics`,
-`Animation`. Reuse an existing topic before adding one; each new topic
-becomes a filter option.
+Status vocabulary in use: `Accepted`, `Conference paper`, `Journal article`,
+`Report contribution`, `Technical report`, `Manuscript`. Topic vocabulary in
+use: `AI`, `Multimodal`, `Diffusion`, `HPC`, `Visualization`, `Earth
+science`, `Marine ecology`, `VR`, `Graphics`, `Animation`. Reuse an existing
+topic before adding one; each new topic becomes a filter option.
 
 Rules that have already been decided:
 
-- The list mirrors the full CV (`../aboutme/content/publications.yaml`,
-  20 entries as of October 2026) in the CV's order, so Vera (ICLR 2027,
-  **Under review**) sits first and Pareto LoRA (WACV 2027, **Accepted**)
-  second. When a status changes in the CV, change it here the same day.
+- The list mirrors the CV (`../aboutme/content/publications.yaml`) in the
+  CV's order, minus anything under review: 19 entries as of October 2026,
+  Pareto LoRA (WACV 2027, **Accepted**) first.
+- **Papers under double-blind review are not listed at all.** Vera (ICLR 2027) is in the CV with `kind: preprint` and `venue: ICLR (under review)`
+  and stays off the site until the decision is public; the same applies to
+  any future submission. There is deliberately no `Under review` status.
 - LoRaQ is team work Madhu did not author. It is never listed as a
   publication; the About page describes it as enablement, as the résumé does.
 - Only papers Madhu authored go in; talks, posters and internal reports do
   not, unless asked.
 
 When the count or the composition changes, update
-`tests/browser/site.spec.js` on purpose: the first-item id (`pub-vera`), the
-`AI` (2), `HPC` (5) and `Marine ecology` (1) filter counts and the
-singular/plural status text. The total is read from the JSON so it does not
-need editing.
+`tests/browser/site.spec.js` on purpose: the first-item id
+(`pub-pareto-lora`), the `AI` (1), `HPC` (5) and `Marine ecology` (1) filter
+counts and the singular/plural status text. The total is read from the JSON
+so it does not need editing.
 
 ## The public/private boundary
 

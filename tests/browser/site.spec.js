@@ -84,18 +84,15 @@ test("topic filtering preserves the complete list and announces counts", async (
   );
   await expect(page.locator(".publication").first()).toHaveAttribute(
     "id",
-    "pub-vera",
+    "pub-pareto-lora",
   );
-  await expect(page.locator("#pub-vera .publication-status")).toHaveText(
-    "Under review",
-  );
+  await expect(page.locator("#pub-vera")).toHaveCount(0);
   await expect(page.locator("#pub-pareto-lora")).toContainText("WACV 2027");
   await expect(page.locator("#pub-pareto-lora .publication-status")).toHaveText(
     "Accepted",
   );
   await select.selectOption("AI");
-  await expect(page.locator(".publication:visible")).toHaveCount(2);
-  await expect(page.locator("#pub-vera")).toBeVisible();
+  await expect(page.locator(".publication:visible")).toHaveCount(1);
   await expect(page.locator("#pub-pareto-lora")).toBeVisible();
   await select.selectOption("HPC");
   await expect(page.locator(".publication:visible")).toHaveCount(5);

@@ -66,13 +66,16 @@ The starting profile was curated from the canonical YAML in the separate
 IDs preserve the original IDs for cross-reference; narrative pages are edited
 here. No automatic private-to-public synchronization takes place.
 
-The publication list mirrors the full CV in `../aboutme`: Pareto LoRA is
-**accepted at WACV 2027** and Vera is marked **under review** (ICLR 2027), both
-matching the current résumé. LoRaQ is not an authored publication and is not
-listed; the About page credits it as enablement, as the résumé does. New entries
-must preserve accurate authorship and distinguish manuscripts, accepted papers,
-and published work. The About page carries the résumé's summary and top bullets
-per role; the CV page (`src/cv.md`) carries skills, awards and talks, service,
+The publication list mirrors the published record in the CV in `../aboutme`:
+Pareto LoRA is **accepted at WACV 2027**, matching the current résumé. Papers
+under double-blind review (Vera, ICLR 2027) are not listed until a decision is
+public. LoRaQ is not an authored publication and is not listed; the About page
+credits it as enablement, as the résumé does. New entries must preserve accurate
+authorship and distinguish manuscripts, accepted papers, and published work. The
+About page describes the AMD role as leading a team that investigated and built
+the world-model agenda and its fine-tuning and post-training pipelines, without
+team size, patent counts or partner lists; it carries the résumé's top bullets
+per role. The CV page (`src/cv.md`) carries skills, awards and talks, service,
 and mentoring. Internal tool names and anything not in the public résumé or CV
 stay out of the pages.
 
